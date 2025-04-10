@@ -1,4 +1,4 @@
-import { IArrayList } from './interfaces/IArrayList';
+import { IArrayList } from '../interfaces/IArrayList';
 
 export class ArrayList implements IArrayList {
   private list: string[];

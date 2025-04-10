@@ -1,4 +1,4 @@
-import { ArrayList } from './arrayList';
+import { ArrayList } from './list/arrayList';
 
 const newList = new ArrayList();
 
