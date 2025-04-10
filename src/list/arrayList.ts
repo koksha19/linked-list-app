@@ -16,7 +16,7 @@ export class ArrayList implements IArrayList {
   }
 
   insert(element: string, index: number): void {
-    this.validate(index);
+    this.validate(index, true);
     this.list.splice(index, 0, element);
   }
 
@@ -60,8 +60,12 @@ export class ArrayList implements IArrayList {
     this.list.push(...(elements as string[]));
   }
 
-  private validate(index: number) {
-    if (index < 0 || index > this.list.length) {
+  private validate(index: number, allowEqualLength: boolean = false) {
+    if (
+      index < 0 ||
+      index > this.list.length ||
+      (!allowEqualLength && index === this.list.length)
+    ) {
       throw new Error('Inappropriate index');
     }
   }
