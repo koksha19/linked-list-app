@@ -1,17 +1,11 @@
 import { ArrayList } from './list/arrayList';
+import { DoublyLinkedList } from './list/doublyLinkedList';
 
-const newList = new ArrayList();
+const newList = new DoublyLinkedList();
 
 newList.append('a');
 newList.append('b');
 newList.append('c');
 newList.append('d');
 
-console.log(newList.length());
-
-newList.extend(['e', 'f', 'g']);
-
-console.log(newList.length());
-
-newList.delete(10);
-console.log(newList.length());
+console.log(newList.clone());

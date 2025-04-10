@@ -1,6 +1,6 @@
-import { IArrayList } from '../interfaces/IArrayList';
+import { IList } from '../interfaces/IList';
 
-export class ArrayList implements IArrayList {
+export class ArrayList implements IList {
   private list: string[];
 
   constructor() {
@@ -56,7 +56,7 @@ export class ArrayList implements IArrayList {
     this.list = [];
   }
 
-  extend(elements: string[] | IArrayList): void {
+  extend(elements: string[] | IList): void {
     this.list.push(...(elements as string[]));
   }
 
