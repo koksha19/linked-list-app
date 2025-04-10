@@ -9,7 +9,7 @@ describe('DoublyLinkedList', () => {
   });
 
   test('Initial length is 0', () => {
-    expect(list.length()).toBe(1);
+    expect(list.length()).toBe(0);
   });
 
   test('Append elements', () => {
